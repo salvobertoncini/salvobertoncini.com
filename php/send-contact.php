@@ -19,5 +19,5 @@
 <html lang="en-US">
 <head>
 	<script>alert("Thank you for contact us. As early as possible  we will contact you.");</script>
-	<meta HTTP-EQUIV="REFRESH" content="0; url=../index.html"> 
+	<meta HTTP-EQUIV="REFRESH" content="0; url=../index.php"> 
 </head>
