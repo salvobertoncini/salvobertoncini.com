@@ -1,19 +1,18 @@
-<!-- FOOTER -->
-<footer id="footer">
+<!-- +++++ Footer Section +++++ -->
+<div id="footer">
 	<div class="container">
 		<div class="row">
-			<!-- SOCIAL ICONS -->
-			<div class="col-sm-6 col-sm-push-6 footer-social-icons">
-				<span>Seguimi su:</span>
-				<a href="http://facebook.com/salvobertoncini"><i class="fa fa-facebook"></i></a>
-				<a href="http://twitter.com/salvobertoncini"><i class="fa fa-twitter"></i></a>
-				<a href="http://github.com/salvobertoncini"><i class="fa fa-github"></i></a>
-			</div>
-			<!-- /SOCIAL ICONS -->
-			<div class="col-sm-6 col-sm-pull-6 copyright">
-				<p>&copy; 2016 <a href="#our-team">Salvo Bertoncini</a>. All Rights Reserved.</p>
+			<div class="col-md-12">
+				<p>Copyright &copy;Salvo Bertoncini <?php echo date("Y");?></p>
 			</div>
 		</div>
 	</div>
-</footer>
-<!-- /FOOTER -->
+</div>
+
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript">
+    window.cookieconsent_options = {"message":"This website uses cookies to ensure you get the best experience on our website","dismiss":"Got it!","learnMore":"More info","link":null,"theme":"dark-bottom"};
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+<!-- End Cookie Consent plugin -->

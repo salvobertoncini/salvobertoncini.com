@@ -1,2 +1,0 @@
-# salvobertoncini.com
-personal website
