@@ -1,44 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<?php @include "head.html"; ?>
+	<?php include_once "head.html"; ?>
 </head>
-
 <body>
 
-	<?php @include "navbar.html"; ?>
+	<?php
+		include_once "navbar.html";
+	?> 
 
 	<div class="container pt">
-		<!-- +++++ Posts Lists +++++ -->
-		<div class="row mt">
-			<div class="col-lg-6 col-lg-offset-3 centered">
-				<h3>MY BLOG</h3>
+		<div class="row mt" id="menuwork">	
+			<div class="col-lg-8 col-lg-offset-2 centered">
+				<h3>BLOG</h3>
 				<hr>
 			</div>
-		</div>
-		<div id="white">
-			<div class="container">
-				<div class="row">
-					<?php 
-					
-					$orig = "<div class=\"col-lg-8 col-lg-offset-2\" id=\"menublog\"> </div>";
-					$a = htmlentities($orig);
-					$b = html_entity_decode($a);
-					echo $b;
+			<div class="col-lg-8 col-lg-offset-2">
+				<?php 
+					include_once "view/all_posts_view.php";
+				?>
+			</div>
+		</div><!-- /row -->
+	</div><!-- /container -->
 
-					?>
-				</div><!-- /row -->
-			</div> <!-- /container -->
-		</div><!-- /white -->
-	</div>
+	<?php include_once "script.php"; ?>
 
-	<?php @include "footer.php"; ?>
-
-<!-- Bootstrap core JavaScript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="initialize_blog.js"></script>
-	<?php include_once("analyticstracking.php") ?>
 </body>
 </html>
