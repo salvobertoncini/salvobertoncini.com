@@ -41,18 +41,17 @@
 		
 		$userLogged = null;
 
-		// criptiamo la password con crypt()
-		$key = substr($password,0,2);
-		$pass_crypt = crypt($password,$key);
+		$stmt = $pdo->prepare('SELECT * FROM users WHERE email = :email');
 
-		$stmt = $pdo->prepare('SELECT * FROM users WHERE email = :email AND password = :password');
-
-		$stmt->execute(array('email' => $email, 'password' => $password));
+		$stmt->execute(array('email' => $email));
 
 		foreach ($stmt as $row)
 		{
-			$userLogged = new User($row["id"], $row["name"], $row["surname"], $row["email"], $row["password"], $row["birthday"], $row["avatar"]);
-			$resp = array('response' => true, 'userLogged' => $userLogged);
+			if(password_verify($password, row["password"]))
+			{
+				$userLogged = new User($row["id"], $row["name"], $row["surname"], $row["email"], $row["password"], $row["birthday"], $row["avatar"]);
+				$resp = array('response' => true, 'userLogged' => $userLogged);
+			}
 		}
 
 		if($userLogged == null)
